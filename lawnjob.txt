@@ -4,7 +4,7 @@
 20 rn=0:sc=0:co=54272:hc=0:gosub2000:gosub200:ti$="000000":gosub300
 120 bo=128:bc=13:pe=peek(56320):jv=15-(peand15)
 125 ifp=5thensc=sc+.050001:sc$=str$(sc):sc$=mid$(sc$,2,4)
-127 printtab(10);sc$;tab(32);mids(ti$,3,2)":";right$(ti$,2)"{cu}"
+127 printtab(10);sc$;tab(32);mids(ti$,3,2)":";right$(ti$,2)"{up}"
 130 pp=op+p(jv):dn=peek(pp):p=peek(pp+co)and15:ifdn<>128then400
 137 ifjv=0orjv=5orjv=6orjv=9orjv=10then120
 140 pokeop,io:pokeop+co,ic:pokepp+co,1:pokepp,jv+130:op=pp
@@ -15,7 +15,7 @@
 210 s=54272:fora=stos+24:pokea,0:next:pokes+24,15:pokes+5,63:pokes+6,255
 220 pokes+4,65:pokes+3,10:pokes+2,255:return 
 300 rem start mower 
-305 print"{wh}"tab(32);mid$(ti$,3,2)":"right$(ti$,2):print"{cu}{cu}"
+305 print"{wht}"tab(32);mid$(ti$,3,2)":"right$(ti$,2):print"{up}{up}"
 310 jv=peek(56320):fr=(jvand16):forit=0to250:next:iffr=16then305 
 315 yn=int(rnd(1)*6)+1:ifyn=1then340 
 320 fortt=2to0step-1:pokes+1,tt:forbb=255to0step-5:pokes,bb:pokes,0:next:next 
@@ -37,24 +37,24 @@
 550 forv=1024to2023:pv=peek(v+co)and15:gosub560:next 
 552 ifll=mmthen600 
 555 print"{cu}    you have not finished the job!" 
-556 forg=0to3000:next:print"{cu}                                      {cd}{cd}" 
+556 forg=0to3000:next:print"{up}                                      {down}{down}" 
 558 gosub300:goto120
 560 ifpv=5thenll=ll+1 
 570 return 
 600 rem end of game
 605 fs=val(sc$)-val(ti$)/100-.50*rn:iffs>hsthenhs=fs
-610 pokes+1,0:poke53281,0:print"{sc}{wh}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}"
+610 pokes+1,0:poke53281,0:print"{clr}{wht}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}"
 615 iffs<0then700 
 620 printtab(6)"great job, you earned $";fs 
 625 print:printtab(10)"highest earning $";hs
-630 print"{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cy}";:printtab(8)"press trigger to play again" 
+630 print"{down}{down}{down}{down}{down}{down}{down}{down}{yel}";:printtab(8)"press trigger to play again" 
 640 aa=peek(56320)and16:ifaa=0then20 
 650 goto640 
-700 print"{cu} your expenses outweighed your earning!" 
+700 print"{up} your expenses outweighed your earning!" 
 710 printtab(5)"find another way to earn money!":goto630
 2000 rem initialazation of screen 
 2003 poke53281,0:poke53280,0:poke53265,peek(53265)and239
-2005 print"{sc}{wh}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}":printtab(2)"score:  0"tab(25)"time:  "; 
+2005 print"{clr}{wht}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}":printtab(2)"score:  0"tab(25)"time:  "; 
 2010 poke53281,5:poke53280,0:poke53281,9 
 2015 forb5=1464to1783:pokeb5,128:pokeb5+co,5:next 
 2016 forc2=1247to1447step40:pokec2,128:pokec2+co,5:next 
@@ -110,10 +110,10 @@
 9999 return 
 11000 rem redefine characters 
 11001 ifpeek(12288)=60then11045 
-11004 poke53280,0:poke53281,0:print"{sc}"
-11005 printtab(16)"{lg}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}lawn job":printtab(19)"{wh}{cd}by" 
-11006 printtab(12)"{cd}mike buhidar jr."
-11007 print"{cy}{cd}{cd}{cd}{cd}{cd}{cd}{cd}{cd}redefining characters, please wait..."
+11004 poke53280,0:poke53281,0:print"{clr}"
+11005 printtab(16)"{lgrn}{down}{down}{down}{down}{down}{down}{down}{down}lawn job":printtab(19)"{wht}{down}by" 
+11006 printtab(12)"{down}mike buhidar jr."
+11007 print"{yel}{down}{down}{down}{down}{down}{down}{down}{down}redefining characters, please wait..."
 11010 printchr$(142):poke52,48:poke56,48:clr:poke56334,peek(56334)and254
 11020 poke1,peek(1)and251 
 11025 forch=0to1023:pokech+12288,peek(ch+53248):next 
