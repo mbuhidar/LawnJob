@@ -10,9 +10,8 @@ don't send a blank disk or, help me, a blank
 cassette tape for me to make a copy for you.  I still
 have the old equipment in storage, but there would
 be a lot of dust and likely the smell of burning
-electronics if I tried it.  I live far from there now
-anyways.  I don't recall the count, but a LOT of
-people did send those in, along with $3.
+electronics if I tried it.  I don't recall the count, 
+but a LOT of people did send those in, along with $3.
 Not a bad gig for a kid.
 
 The code is included as a .bas file.
@@ -57,6 +56,6 @@ don't want to spring for our monthly disk (see page
 66), send a blank disk (1541 format) or a cassette
 tape, a self-addressed stamped mailer, and $3 to:
 Michael Buhidar Jr.
-4317 Hermosa
-Corpus Christi, TX 78411
+Street Address
+City, State ZIP
 ******************************************************
