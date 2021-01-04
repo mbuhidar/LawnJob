@@ -14,7 +14,10 @@ electronics if I tried it.  I don't recall the count,
 but a LOT of people did send those in, along with $3.
 Not a bad gig for a kid.
 
-The code is included as a .bas file.
+Code extensions:
+lawnjob.ahoy: verbatim text as typed in from magazine
+lawnjob.bas:  program listing in ASCII text
+lawnjob.prg:  program tokenized for C64 using petcat
 
 
 ******************************************************
