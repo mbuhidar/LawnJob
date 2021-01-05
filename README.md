@@ -19,6 +19,18 @@ lawnjob.ahoy: verbatim text as typed in from magazine
 lawnjob.bas:  program listing in ASCII text
 lawnjob.prg:  program tokenized for C64 using petcat
 
+Code checked using the Ahoy! Bug Repellent line
+code checking tool and line codes were verified
+against the codes in the images excerpted from 
+the magazine.  Images included in this repo.
+
+Runs in VICE like it did on C64 with no issues,
+however, there are a few improvements I would like
+to make.  Issues in this repo for progress.
+
+For the Bug Repellent tool, see:
+https://github.com/mbuhidar/C64_Bug_Repellent.git
+
 
 ******************************************************
 Lawn Job is a game in which you play the

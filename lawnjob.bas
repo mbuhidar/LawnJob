@@ -4,7 +4,7 @@
 20 rn=0:sc=0:co=54272:hc=0:gosub2000:gosub200:ti$="000000":gosub300
 120 bo=128:bc=13:pe=peek(56320):jv=15-(peand15)
 125 ifp=5thensc=sc+.050001:sc$=str$(sc):sc$=mid$(sc$,2,4)
-127 printtab(10);sc$;tab(32);mids(ti$,3,2)":";right$(ti$,2)"{up}"
+127 printtab(10);sc$;tab(32);mid$(ti$,3,2)":";right$(ti$,2)"{up}"
 130 pp=op+p(jv):dn=peek(pp):p=peek(pp+co)and15:ifdn<>128then400
 137 ifjv=0orjv=5orjv=6orjv=9orjv=10then120
 140 pokeop,io:pokeop+co,ic:pokepp+co,1:pokepp,jv+130:op=pp
@@ -32,12 +32,12 @@
 520 rem walk on sidewalk 
 530 bo=129:bc=15:goto137 
 540 rem check for complete job
-545 ll=0:print"{up}{up}{up}looking over your work." 
+545 ll=0:print"{up}{up}{up}   looking over your work." 
 546 forgg=1to0:pokes+1,gg:foryy=255to0step-1:pokes,yy:next:next:pokes+1,0 
 550 forv=1024to2023:pv=peek(v+co)and15:gosub560:next 
 552 ifll=mmthen600 
-555 print"{up}    you have not finished the job!" 
-556 forg=0to3000:next:print"{up}                                      {down}{down}" 
+555 print"{up}     you have not finished the job!" 
+556 forg=0to3000:next:print"{up}                                       {down}{down}" 
 558 gosub300:goto120
 560 ifpv=5thenll=ll+1 
 570 return 
@@ -47,7 +47,7 @@
 615 iffs<0then700 
 620 printtab(6)"great job, you earned $";fs 
 625 print:printtab(10)"highest earning $";hs
-630 print"{down}{down}{down}{down}{down}{down}{down}{down}{yel}";:printtab(8)"press trigger to play again" 
+630 print"{down}{down}{down}{down}{down}{down}{down}{down}{cyn}";:printtab(8)"press trigger to play again" 
 640 aa=peek(56320)and16:ifaa=0then20 
 650 goto640 
 700 print"{up} your expenses outweighed your earning!" 
@@ -59,7 +59,7 @@
 2015 forb5=1464to1783:pokeb5,128:pokeb5+co,5:next 
 2016 forc2=1247to1447step40:pokec2,128:pokec2+co,5:next 
 2017 forc3=1248to1448step40:pokec3,128:pokec3+co,5:next 
-2018 forc4=1249to1449step4o:pokec4,128:pokec4+co,5:next 
+2018 forc4=1249to1449step40:pokec4,128:pokec4+co,5:next 
 2019 forc5=1250to1450step40:pokec5,128:pokec5+co,5:next 
 2020 forc6=1310to1326:pokec6,128:pokec6+co,5:next 
 2021 forc7=1350to1366:pokec7,128:pokec7+co,5:next 
@@ -83,7 +83,7 @@
 3070 forb3=1271to1285:pokeb3,67:pokeb3+co,12:next 
 3080 poke1270,74:poke1270+co,12:poke1286,75:poke1286+co,12 
 3090 poke1230,93:poke1230+co,12:poke1246,93:poke1246+co,12 
-3100 forb4=1231to12a5step2:pokeb4,135:pokeb4+co,7:next 
+3100 forb4=1231to1245step2:pokeb4,135:pokeb4+co,7:next 
 3110 forb6=1024to1424step40:pokeb6,128:pokeb6+co,5:next
 3120 forb7=1025to1425step40:pokeb7,128:pokeb7+co,5:next 
 3130 forb8=1026to1426step40:pokeb8,128:pokeb8+co,5:next 
@@ -101,7 +101,7 @@
 3220 ifpeek(rp)<>128then3210 
 3221 ifpeek(rp-1)=130then3210 
 3222 ifpeek(rp+1)=130then3210 
-3223 ifpeek(rp+39)=130then321o 
+3223 ifpeek(rp+39)=130then3210
 3224 ifpeek(rp+41)=130then3210 
 3225 ifpeek(rp-41)=130then3210 
 3226 ifpeek(rp-39)=130then3210 
@@ -113,14 +113,14 @@
 11004 poke53280,0:poke53281,0:print"{clr}"
 11005 printtab(16)"{lgrn}{down}{down}{down}{down}{down}{down}{down}{down}lawn job":printtab(19)"{wht}{down}by" 
 11006 printtab(12)"{down}mike buhidar jr."
-11007 print"{yel}{down}{down}{down}{down}{down}{down}{down}{down}redefining characters, please wait..."
+11007 print"{cyn}{down}{down}{down}{down}{down}{down}{down}{down}redefining characters, please wait..."
 11010 printchr$(142):poke52,48:poke56,48:clr:poke56334,peek(56334)and254
 11020 poke1,peek(1)and251 
 11025 forch=0to1023:pokech+12288,peek(ch+53248):next 
 11030 forcd=0to87:readd:pokecd+13312,d:next 
 11040 poke1,peek(1)or4:poke56334,peek(56334)or1 
 11045 poke53272,(peek(53272)and240)+12 
-11050 goto17 
+11050 goto17
 12000 rem data for characters 
 12010 data173,255,219,254,183,253,111,255 
 12020 data255,255,255,255,255,255,255,255 
