@@ -1,5 +1,5 @@
 Lawn Job is a game I wrote in 1983/84 timeframe 
-when I was in my teenage years.  It is written in
+when I was in my teenage years.  It was written in
 C64 BASIC and was published in the October 1984
 issue of "Ahoy!" magazine as a type-in game.  
 
@@ -14,10 +14,13 @@ electronics if I tried it.  I don't recall the count,
 but a LOT of people did send those in, along with $3.
 Not a bad gig for a kid.
 
-Code extensions:
-lawnjob.ahoy: verbatim text as typed in from magazine
-lawnjob.bas:  program listing in ASCII text
-lawnjob.prg:  program tokenized for C64 using petcat
+File extensions:
+
+- lawnjob.ahoy: verbatim text as typed in from magazine
+
+- lawnjob.bas:  program listing in ASCII text
+
+- lawnjob.prg:  program tokenized for C64 using petcat
 
 Code checked using the Ahoy! Bug Repellent line
 code checking tool and line codes were verified
